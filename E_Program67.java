@@ -3,18 +3,25 @@
 class E_Program67{
     public static void main(String args[])
     {
-      int [] Array={5,4,8,1,6,3};
+      float [] Array={5.3f,4.29f,4.28f,1.5f,6.9f,3.2f};
+      float Temp=0.0f;
       for(int i=0; i<Array.length; i++)
       {
-         for(int j=0;j<Array.length;j++)
+         for(int j=i+1;j<Array.length;j++)
          {
-            
+            if(Array[i]>Array[j])
+            {
+               Temp=Array[j];
+               Array[j]=Array[i];
+               Array[i]=Temp;
+            }
          }
       }
-      for(int j=0;j<Array.length;j++)
-         {
-            System.out.print(Array[j]);
-         }
+   for(int i=0;i<6;i++){
+         System.out.print(Array[i]+" - ");
+   }
+
+
     }
 }
 
